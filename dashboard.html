@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard - CreatorPro AI</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+body{margin:0;background:#0b1220;color:white;font-family:Arial}
+.sidebar{width:220px;background:#111827;height:100vh;position:fixed;padding:20px}
+.sidebar a{display:block;color:#94a3b8;margin:15px 0;text-decoration:none}
+.content{margin-left:240px;padding:40px}
+.card{background:#111827;padding:20px;border-radius:14px;margin-bottom:20px}
+</style>
+</head>
+<body>
+  <button class="btn" onclick="watchAd()">Watch Ad & Earn 5 Coins</button>
+
+<script src="assets/js/coins.js"></script>
+<script>
+function watchAd(){
+  alert("Ad playing...");
+  setTimeout(()=>{
+    addCoins(5);
+  },3000);
+}
+</script>
+
+<div class="sidebar">
+<h3>CreatorPro</h3>
+<a href="#">Dashboard</a>
+<a href="#">My Plan</a>
+<a href="#">Usage</a>
+<a href="#">Settings</a>
+<a href="#">Logout</a>
+</div>
+
+<div class="content">
+<h2>Welcome Back</h2>
+
+<div class="card">
+<h3>Your Plan</h3>
+<p>Pro Plan - Active</p>
+</div>
+
+<div class="card">
+<h3>AI Usage</h3>
+<p>120 / Unlimited</p>
+</div>
+
+<div class="card">
+<h3>Quick Tools</h3>
+<p>Generate title, hashtag, keyword</p>
+</div>
+
+</div>
+
+</body>
+</html>

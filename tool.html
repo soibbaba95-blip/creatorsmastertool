@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Creator Master Tools</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+.tool-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.tool{background:#111827;padding:20px;border-radius:14px;border:1px solid #374151}
+.tool input, .tool textarea{width:100%;margin-top:8px;padding:8px;background:#000;border:1px solid #333;color:#fff;border-radius:8px}
+.tool button{margin-top:10px;padding:10px;width:100%;background:#6366f1;color:#fff;border:0;border-radius:8px}
+.res{margin-top:10px;font-size:13px;color:#10b981}
+</style>
+</head>
+
+<body>
+
+<h1>🔥 Creator Tools Dashboard</h1>
+
+<div class="tool-grid">
+
+<!-- 1 Adsense Calculator -->
+<div class="tool">
+<h3>Adsense Earnings</h3>
+<input id="v1" placeholder="Views">
+<input id="c1" placeholder="CPM ₹">
+<button onclick="t1()">Calculate</button>
+<div class="res" id="r1"></div>
+</div>
+
+<!-- 2 YouTube Money -->
+<div class="tool">
+<h3>YouTube Revenue</h3>
+<input id="v2" placeholder="Views">
+<button onclick="t2()">Estimate</button>
+<div class="res" id="r2"></div>
+</div>
+
+<!-- 3 Hashtags -->
+<div class="tool">
+<h3>Hashtag Generator</h3>
+<input id="v3" placeholder="Topic">
+<button onclick="t3()">Generate</button>
+<div class="res" id="r3"></div>
+</div>
+
+<!-- 4 Title -->
+<div class="tool">
+<h3>SEO Title</h3>
+<input id="v4" placeholder="Keyword">
+<button onclick="t4()">Generate</button>
+<div class="res" id="r4"></div>
+</div>
+
+<!-- 5 Description -->
+<div class="tool">
+<h3>Description</h3>
+<input id="v5" placeholder="Topic">
+<button onclick="t5()">Create</button>
+<div class="res" id="r5"></div>
+</div>
+
+<!-- 6 Thumbnail Text -->
+<div class="tool">
+<h3>Thumbnail Text</h3>
+<input id="v6" placeholder="Topic">
+<button onclick="t6()">Create</button>
+<div class="res" id="r6"></div>
+</div>
+
+<!-- 7 Reel Ideas -->
+<div class="tool">
+<h3>Reel Ideas</h3>
+<input id="v7" placeholder="Niche">
+<button onclick="t7()">Ideas</button>
+<div class="res" id="r7"></div>
+</div>
+
+<!-- 8 TikTok Caption -->
+<div class="tool">
+<h3>TikTok Caption</h3>
+<input id="v8">
+<button onclick="t8()">Generate</button>
+<div class="res" id="r8"></div>
+</div>
+
+<!-- 9 Instagram Bio -->
+<div class="tool">
+<h3>Instagram Bio</h3>
+<input id="v9">
+<button onclick="t9()">Create</button>
+<div class="res" id="r9"></div>
+</div>
+
+<!-- 10 Channel Name -->
+<div class="tool">
+<h3>Channel Name</h3>
+<input id="v10">
+<button onclick="t10()">Generate</button>
+<div class="res" id="r10"></div>
+</div>
+
+<!-- 11 Brand Name -->
+<div class="tool">
+<h3>Brand Name</h3>
+<input id="v11">
+<button onclick="t11()">Generate</button>
+<div class="res" id="r11"></div>
+</div>
+
+<!-- 12 Hook Generator -->
+<div class="tool">
+<h3>Hook Line</h3>
+<input id="v12">
+<button onclick="t12()">Create</button>
+<div class="res" id="r12"></div>
+</div>
+
+<!-- 13 Script Starter -->
+<div class="tool">
+<h3>Video Script Intro</h3>
+<input id="v13">
+<button onclick="t13()">Create</button>
+<div class="res" id="r13"></div>
+</div>
+
+<!-- 14 Keyword Difficulty -->
+<div class="tool">
+<h3>Keyword Difficulty</h3>
+<input id="v14">
+<button onclick="t14()">Check</button>
+<div class="res" id="r14"></div>
+</div>
+
+<!-- 15 CPM Compare -->
+<div class="tool">
+<h3>Country CPM</h3>
+<button onclick="t15()">Show</button>
+<div class="res" id="r15"></div>
+</div>
+
+<!-- 16 Affiliate Profit -->
+<div class="tool">
+<h3>Affiliate Profit</h3>
+<input id="v16" placeholder="Sales">
+<input id="v16b" placeholder="Commission ₹">
+<button onclick="t16()">Calc</button>
+<div class="res" id="r16"></div>
+</div>
+
+<!-- 17 Content Ideas -->
+<div class="tool">
+<h3>Content Ideas</h3>
+<input id="v17">
+<button onclick="t17()">Generate</button>
+<div class="res" id="r17"></div>
+</div>
+
+<!-- 18 Caption Spinner -->
+<div class="tool">
+<h3>Caption Spinner</h3>
+<input id="v18">
+<button onclick="t18()">Spin</button>
+<div class="res" id="r18"></div>
+</div>
+
+<!-- 19 Upload Frequency -->
+<div class="tool">
+<h3>Growth Plan</h3>
+<button onclick="t19()">Plan</button>
+<div class="res" id="r19"></div>
+</div>
+
+<!-- 20 Coin Reward Sim -->
+<div class="tool">
+<h3>Watch Ad Reward</h3>
+<button onclick="t20()">Simulate</button>
+<div class="res" id="r20"></div>
+</div>
+
+</div>
+
+<script>
+t1=()=>r1.innerText="₹"+(v1.value/1000*v1.value?c1.value:0)
+t2=()=>r2.innerText="₹"+(v2.value/1000*120)
+t3=()=>r3.innerText="#"+v3.value+" #viral #trending #reels #fyp"
+t4=()=>r4.innerText="Best "+v4.value+" Guide That Explodes Views"
+t5=()=>r5.innerText="Full guide about "+v5.value+" with tips and tricks."
+t6=()=>r6.innerText="YOU WON'T BELIEVE THIS "+v6.value
+t7=()=>r7.innerText="Top 5 "+v7.value+" hacks"
+t8=()=>r8.innerText=v8.value+" — watch till end 🔥"
+t9=()=>r9.innerText="Helping you with "+v9.value+" daily"
+t10=()=>r10.innerText=v10.value+" Studio"
+t11=()=>r11.innerText=v11.value+" Labs"
+t12=()=>r12.innerText="Stop scrolling if you want "+v12.value
+t13=()=>r13.innerText="Today we reveal "+v13.value
+t14=()=>r14.innerText="Competition: Medium"
+t15=()=>r15.innerText="USA ₹800 | UK ₹600 | India ₹120"
+t16=()=>r16.innerText="₹"+(v16.value*v16b.value)
+t17=()=>r17.innerText="10 "+v17.value+" video ideas"
+t18=()=>r18.innerText=v18.value+" | "+v18.value+" tips"
+t19=()=>r19.innerText="Upload 1 daily for 90 days"
+t20=()=>r20.innerText="+10 Coins Added"
+</script>
+
+<script src="assets/js/tools.js"></script>
+</body>
+</html>
